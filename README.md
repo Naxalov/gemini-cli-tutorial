@@ -87,7 +87,22 @@ When you are in an interactive session, you can use the following slash commands
 
 ### Custom Commands
 
-You can define custom commands to streamline your workflow.
+You can define custom commands to streamline your workflow in two ways:
+
+#### 1. File-based Commands (Recommended)
+
+Create a Markdown file in the `.gemini/commands/` directory. The filename (without the `.md` extension) becomes the command name.
+
+- **Example**: Create `.gemini/commands/summarize.md` with the content:
+  ```markdown
+  Summarize the following text in three bullet points:
+  ```
+- **Usage**: Run the command using the `@` prefix:
+  ```bash
+  gemini @summarize "Your long text here..."
+  ```
+
+#### 2. CLI-defined Commands
 
 - `gemini custom list`: List all your defined custom commands.
 - `gemini custom add <NAME> <PROMPT>`: Create a shortcut for a frequently used prompt.

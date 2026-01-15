@@ -1,0 +1,11 @@
+description = "Generate random integer number"
+
+prompt = """
+
+Generate a random integer number between {{args}} 
+
+if user does not provide any arguments, ask for a range (minimum and maximum values).
+
+Output:
+Create a txt file named 'random_number_{{current_timestamp}}.txt' containing the generated random number.
+"""
